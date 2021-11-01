@@ -7,5 +7,5 @@ import java.util.List;
 public interface DisfrazService {
     List<Disfraz> getAll();
     Disfraz saveOrUpdate(Disfraz disfraz);
-    Boolean delete(Long id);
+    void delete(Long id);
 }

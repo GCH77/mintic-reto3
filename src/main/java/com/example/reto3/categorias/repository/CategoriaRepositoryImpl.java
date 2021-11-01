@@ -32,12 +32,7 @@ public class CategoriaRepositoryImpl implements CategoriaService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
-        if (categoriaCrudRepository.findById(id).isPresent()) {
-            categoriaCrudRepository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
+    public void delete(Long id) {
+        categoriaCrudRepository.deleteById(id);
     }
 }

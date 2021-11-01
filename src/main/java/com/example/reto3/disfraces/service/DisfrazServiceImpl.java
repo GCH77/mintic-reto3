@@ -21,7 +21,7 @@ public class DisfrazServiceImpl {
         return disfrazService.saveOrUpdate(disfraz);
     }
 
-    public Boolean delete(Long id) {
-        return disfrazService.delete(id);
+    public void delete(Long id) {
+        disfrazService.delete(id);
     }
 }

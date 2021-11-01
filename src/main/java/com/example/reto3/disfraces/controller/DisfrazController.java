@@ -35,7 +35,7 @@ public class DisfrazController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> delete(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(disfrazService.delete(id), HttpStatus.OK);
+    public void delete(@PathVariable("id") Long id) {
+        disfrazService.delete(id);
     }
 }

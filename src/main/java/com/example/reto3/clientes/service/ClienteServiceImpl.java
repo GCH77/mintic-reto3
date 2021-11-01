@@ -23,7 +23,7 @@ public class ClienteServiceImpl {
         return clienteService.saveOrUpdate(cliente);
     }
 
-    public Boolean delete(Long id) {
-        return clienteService.delete(id);
+    public void delete(Long id) {
+        clienteService.delete(id);
     }
 }

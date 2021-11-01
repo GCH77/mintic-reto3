@@ -23,7 +23,7 @@ public class CategoriaServiceImpl {
         return categoriaService.saveOrUpdate(categoria);
     }
 
-    public Boolean delete(Long id) {
-        return categoriaService.delete(id);
+    public void delete(Long id) {
+        categoriaService.delete(id);
     }
 }

@@ -7,5 +7,5 @@ import java.util.List;
 public interface ClienteService {
     List<Cliente> getAll();
     Cliente saveOrUpdate(Cliente cliente);
-    Boolean delete(Long id);
+    void delete(Long id);
 }

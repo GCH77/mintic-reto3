@@ -31,12 +31,7 @@ public class DisfrazRepositoryImpl implements DisfrazService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
-        if (disfrazCrudRepository.findById(id).isPresent()) {
-            disfrazCrudRepository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
+    public void delete(Long id) {
+        disfrazCrudRepository.deleteById(id);
     }
 }

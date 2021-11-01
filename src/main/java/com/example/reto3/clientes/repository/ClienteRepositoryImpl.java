@@ -31,12 +31,7 @@ public class ClienteRepositoryImpl implements ClienteService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
-        if (clienteCrudRepository.findById(id).isPresent()) {
-            clienteCrudRepository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
+    public void delete(Long id) {
+        clienteCrudRepository.deleteById(id);
     }
 }

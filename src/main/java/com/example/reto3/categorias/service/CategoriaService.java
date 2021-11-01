@@ -7,5 +7,5 @@ import java.util.List;
 public interface CategoriaService {
     List<Categoria> getAll();
     Categoria saveOrUpdate(Categoria categoria);
-    Boolean delete(Long id);
+    void delete(Long id);
 }
