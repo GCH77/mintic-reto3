@@ -31,10 +31,11 @@ public class ClienteController {
 
     @PutMapping("/update")
     public ResponseEntity<Cliente> update(@RequestBody Cliente cliente) {
-        return new ResponseEntity<>(clienteService.saveOrUpdate(cliente), HttpStatus.OK);
+        return new ResponseEntity<>(clienteService.saveOrUpdate(cliente), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") Long id) {
         clienteService.delete(id);
     }
