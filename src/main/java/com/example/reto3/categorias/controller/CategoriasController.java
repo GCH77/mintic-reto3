@@ -31,10 +31,11 @@ public class CategoriasController {
 
     @PutMapping("/update")
     public ResponseEntity<Categoria> update(@RequestBody Categoria categoria) {
-        return new ResponseEntity<>(categoriaService.saveOrUpdate(categoria), HttpStatus.OK);
+        return new ResponseEntity<>(categoriaService.saveOrUpdate(categoria), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") Long id) {
         categoriaService.delete(id);
     }

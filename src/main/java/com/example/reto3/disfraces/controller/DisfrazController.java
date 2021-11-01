@@ -31,7 +31,7 @@ public class DisfrazController {
 
     @PutMapping("/update")
     public ResponseEntity<Disfraz> update(@RequestBody Disfraz disfraz) {
-        return new ResponseEntity<>(disfrazService.saveOrUpdate(disfraz), HttpStatus.OK);
+        return new ResponseEntity<>(disfrazService.saveOrUpdate(disfraz), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
