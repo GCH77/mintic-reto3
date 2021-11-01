@@ -15,34 +15,34 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idReservation;
 
+    private LocalDate startDate;
+    private LocalDate devolutionDate;
+
+    private String status;
+
     @ManyToOne
     @JoinColumn(name = "disfraz_id", insertable = false, updatable = false)
-    private Disfraz custome;
+    private Disfraz costume;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id", insertable = false, updatable = false)
     private Cliente client;
 
-    private LocalDate startDate;
-    private LocalDate devolutionDate;
-    private String status;
-
-    @OneToMany(mappedBy = "reservation")
-    private List<CalificacionReserva> score;
+    private Integer score;
 
     public Reserva() {
     }
 
-    public Reserva(Long idReservation, Disfraz custome, Cliente client, LocalDate startDate, LocalDate devolutionDate) {
+    public Reserva(Long idReservation, Disfraz costume, Cliente client, LocalDate startDate, LocalDate devolutionDate) {
         this.idReservation = idReservation;
-        this.custome = custome;
+        this.costume = costume;
         this.client = client;
         this.startDate = startDate;
         this.devolutionDate = devolutionDate;
     }
 
-    public Reserva(Disfraz custome, Cliente client, LocalDate startDate, LocalDate devolutionDate) {
-        this.custome = custome;
+    public Reserva(Disfraz costume, Cliente client, LocalDate startDate, LocalDate devolutionDate) {
+        this.costume = costume;
         this.client = client;
         this.startDate = startDate;
         this.devolutionDate = devolutionDate;
@@ -57,11 +57,11 @@ public class Reserva {
     }
 
     public Disfraz getCustome() {
-        return custome;
+        return costume;
     }
 
-    public void setCustome(Disfraz custome) {
-        this.custome = custome;
+    public void setCustome(Disfraz costume) {
+        this.costume = costume;
     }
 
     public Cliente getClient() {
@@ -96,11 +96,11 @@ public class Reserva {
         this.status = status;
     }
 
-    public List<CalificacionReserva> getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(List<CalificacionReserva> score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 }

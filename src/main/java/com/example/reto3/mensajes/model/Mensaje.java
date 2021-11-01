@@ -18,23 +18,23 @@ public class Mensaje {
     private Cliente client;
 
     @ManyToOne
-    @JoinColumn(name = "custome_id", insertable = false, updatable = false)
-    private Disfraz custome;
+    @JoinColumn(name = "costume_id", insertable = false, updatable = false)
+    private Disfraz costume;
 
     public Mensaje() {
     }
 
-    public Mensaje(Long idMessage, String messageText, Cliente client, Disfraz custome) {
+    public Mensaje(Long idMessage, String messageText, Cliente client, Disfraz costume) {
         this.idMessage = idMessage;
         this.messageText = messageText;
         this.client = client;
-        this.custome = custome;
+        this.costume = costume;
     }
 
-    public Mensaje(String messageText, Cliente client, Disfraz custome) {
+    public Mensaje(String messageText, Cliente client, Disfraz costume) {
         this.messageText = messageText;
         this.client = client;
-        this.custome = custome;
+        this.costume = costume;
     }
 
     public Long getIdMessage() {
@@ -62,11 +62,11 @@ public class Mensaje {
     }
 
     public Disfraz getCustome() {
-        return custome;
+        return costume;
     }
 
-    public void setCustome(Disfraz custome) {
-        this.custome = custome;
+    public void setCustome(Disfraz costume) {
+        this.costume = costume;
     }
 }
 /*

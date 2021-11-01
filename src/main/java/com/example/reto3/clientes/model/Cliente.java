@@ -12,10 +12,10 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idClient;
-    private String name;
     private String email;
-    private int age;
     private String password;
+    private String name;
+    private int age;
 
     @OneToMany(mappedBy = "client")
     private List<Mensaje> messages;

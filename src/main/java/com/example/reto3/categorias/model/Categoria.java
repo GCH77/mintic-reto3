@@ -15,7 +15,7 @@ public class Categoria {
     private String description;
 
     @OneToMany(mappedBy = "category")
-    private List<Disfraz> customes;
+    private List<Disfraz> costumes;
 
     public Categoria() {
     }
@@ -56,11 +56,11 @@ public class Categoria {
     }
 
     public List<Disfraz> getCustomes() {
-        return customes;
+        return costumes;
     }
 
-    public void setCustomes(List<Disfraz> customes) {
-        this.customes = customes;
+    public void setCustomes(List<Disfraz> costumes) {
+        this.costumes = costumes;
     }
 }
 	/*[

@@ -13,19 +13,19 @@ public class Disfraz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String brand;
     private int year;
-    private String name;
     private String description;
 
     @ManyToOne
     @JoinColumn(name = "category_id", insertable = false, updatable = false)
     private Categoria category;
 
-    @OneToMany(mappedBy = "custome")
+    @OneToMany(mappedBy = "costume")
     private List<Mensaje> messages;
 
-    @OneToMany(mappedBy = "custome")
+    @OneToMany(mappedBy = "costume")
     private List<Reserva> reservations;
 
     public Disfraz() {

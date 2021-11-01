@@ -26,6 +26,7 @@ public class ReservaRepositoryImpl implements ReservaService {
     @Override
     @Transactional
     public Reserva saveOrUpdate(Reserva reserva) {
+        reserva.setStatus("created");
         return reservaCrudRepository.save(reserva);
     }
 
