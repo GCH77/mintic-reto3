@@ -56,11 +56,11 @@ public class Reserva {
         this.idReservation = idReservation;
     }
 
-    public Disfraz getCustome() {
+    public Disfraz getCostume() {
         return costume;
     }
 
-    public void setCustome(Disfraz costume) {
+    public void setCostume(Disfraz costume) {
         this.costume = costume;
     }
 

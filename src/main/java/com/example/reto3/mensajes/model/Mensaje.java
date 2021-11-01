@@ -61,11 +61,11 @@ public class Mensaje {
         this.client = client;
     }
 
-    public Disfraz getCustome() {
+    public Disfraz getCostume() {
         return costume;
     }
 
-    public void setCustome(Disfraz costume) {
+    public void setCostume(Disfraz costume) {
         this.costume = costume;
     }
 }

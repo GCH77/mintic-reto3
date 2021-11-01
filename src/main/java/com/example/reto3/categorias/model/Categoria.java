@@ -55,11 +55,11 @@ public class Categoria {
         this.description = description;
     }
 
-    public List<Disfraz> getCustomes() {
+    public List<Disfraz> getCostumes() {
         return costumes;
     }
 
-    public void setCustomes(List<Disfraz> costumes) {
+    public void setCostumes(List<Disfraz> costumes) {
         this.costumes = costumes;
     }
 }
