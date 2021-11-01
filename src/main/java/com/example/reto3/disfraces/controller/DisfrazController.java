@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/custome")
+@RequestMapping("/api/Costume")
 public class DisfrazController {
     private final DisfrazServiceImpl disfrazService;
 
@@ -19,7 +19,7 @@ public class DisfrazController {
         this.disfrazService = disfrazService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Disfraz>> getAll() {
         return new ResponseEntity<>(disfrazService.getAll(), HttpStatus.OK);
     }

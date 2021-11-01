@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/api/Category")
 public class CategoriasController {
     private final CategoriaServiceImpl categoriaService;
 
@@ -19,7 +19,7 @@ public class CategoriasController {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Categoria>> getAll() {
         return new ResponseEntity<>(categoriaService.getAll(), HttpStatus.OK);
     }

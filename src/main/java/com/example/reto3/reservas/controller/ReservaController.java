@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/reserva")
+@RequestMapping("/api/Reservation")
 public class ReservaController {
     private final ReservaServiceImpl reservaService;
 
@@ -19,7 +19,7 @@ public class ReservaController {
         this.reservaService = reservaService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Reserva>> getAll() {
         return new ResponseEntity<>(reservaService.getAll(), HttpStatus.OK);
     }

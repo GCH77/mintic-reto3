@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/calificacion-reserva")
+@RequestMapping("/api/calificacion-reserva")
 public class CalificacionReservaController{
 
     private final CalificacionReservaServiceImpl calificacionReservaService;
@@ -21,7 +21,7 @@ public class CalificacionReservaController{
         this.calificacionReservaService = calificacionReservaService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<CalificacionReserva>> getAll() {
         return new ResponseEntity<>(calificacionReservaService.getAll(), HttpStatus.OK);
     }
