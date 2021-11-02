@@ -26,6 +26,12 @@ public class DisfrazRepositoryImpl implements DisfrazService {
     @Override
     @Transactional
     public Disfraz saveOrUpdate(Disfraz disfraz) {
+        if (disfrazCrudRepository.existsById(disfraz.getId())) {
+            Disfraz disfraz1 = disfrazCrudRepository.getById(disfraz.getId());
+            disfraz1.setName(disfraz.getName());
+            disfraz1.setBrand(disfraz.getBrand());
+            disfraz1.setYear(disfraz.getYear());
+        }
         return disfrazCrudRepository.save(disfraz);
     }
 
