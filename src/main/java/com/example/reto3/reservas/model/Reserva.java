@@ -1,13 +1,11 @@
 package com.example.reto3.reservas.model;
 
-import com.example.reto3.calificacionReservas.model.CalificacionReserva;
 import com.example.reto3.clientes.model.Cliente;
 import com.example.reto3.disfraces.model.Disfraz;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.List;
+import java.util.Date;
 
 @Entity
 @Table
@@ -16,8 +14,8 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idReservation;
 
-    private LocalDate startDate;
-    private LocalDate devolutionDate;
+    private Date startDate;
+    private Date devolutionDate;
 
     private String status;
 
@@ -36,7 +34,7 @@ public class Reserva {
     public Reserva() {
     }
 
-    public Reserva(Long idReservation, Disfraz costume, Cliente client, LocalDate startDate, LocalDate devolutionDate) {
+    public Reserva(Long idReservation, Disfraz costume, Cliente client, Date startDate, Date devolutionDate) {
         this.idReservation = idReservation;
         this.costume = costume;
         this.client = client;
@@ -44,7 +42,7 @@ public class Reserva {
         this.devolutionDate = devolutionDate;
     }
 
-    public Reserva(Disfraz costume, Cliente client, LocalDate startDate, LocalDate devolutionDate) {
+    public Reserva(Disfraz costume, Cliente client, Date startDate, Date devolutionDate) {
         this.costume = costume;
         this.client = client;
         this.startDate = startDate;
@@ -75,19 +73,19 @@ public class Reserva {
         this.client = client;
     }
 
-    public LocalDate getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getDevolutionDate() {
+    public Date getDevolutionDate() {
         return devolutionDate;
     }
 
-    public void setDevolutionDate(LocalDate devolutionDate) {
+    public void setDevolutionDate(Date devolutionDate) {
         this.devolutionDate = devolutionDate;
     }
 

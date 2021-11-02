@@ -15,14 +15,15 @@ public class Mensaje {
     private String messageText;
 
     @ManyToOne
+    @JoinColumn(name = "costume_id")
+    @JsonIgnoreProperties({"messages", "reservations"})
+    private Disfraz costume;
+
+    @ManyToOne
     @JoinColumn(name = "cliente_id")
     @JsonIgnoreProperties({"messages", "reservations"})
     private Cliente client;
 
-    @ManyToOne
-    @JoinColumn(name = "costume_id")
-    @JsonIgnoreProperties({"messages", "reservations"})
-    private Disfraz costume;
 
     public Mensaje() {
     }
