@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class ReservaRepositoryImpl implements ReservaService {
@@ -26,7 +27,8 @@ public class ReservaRepositoryImpl implements ReservaService {
     @Override
     @Transactional
     public Reserva saveOrUpdate(Reserva reserva) {
-        reserva.setStatus("created");
+        String status = Optional.ofNullable(reserva.getStatus()).isPresent() ? reserva.getStatus() : "created";
+        reserva.setStatus(status);
         return reservaCrudRepository.save(reserva);
     }
 
