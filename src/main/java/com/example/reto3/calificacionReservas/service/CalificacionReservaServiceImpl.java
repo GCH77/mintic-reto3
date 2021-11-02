@@ -23,7 +23,7 @@ public class CalificacionReservaServiceImpl {
         return calificacionReservaService.saveOrUpdate(calificacionReserva);
     }
 
-    public Boolean delete(Long id) {
-        return calificacionReservaService.delete(id);
+    public void delete(Long id) {
+        calificacionReservaService.delete(id);
     }
 }

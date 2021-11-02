@@ -23,7 +23,7 @@ public class MensajeServiceImpl {
         return mensajeService.saveOrUpdate(mensaje);
     }
 
-    public Boolean delete(Long id) {
-        return mensajeService.delete(id);
+    public void delete(Long id) {
+        mensajeService.delete(id);
     }
 }

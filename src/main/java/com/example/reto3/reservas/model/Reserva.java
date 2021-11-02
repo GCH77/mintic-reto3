@@ -3,6 +3,7 @@ package com.example.reto3.reservas.model;
 import com.example.reto3.calificacionReservas.model.CalificacionReserva;
 import com.example.reto3.clientes.model.Cliente;
 import com.example.reto3.disfraces.model.Disfraz;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -21,11 +22,13 @@ public class Reserva {
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "disfraz_id", insertable = false, updatable = false)
+    @JoinColumn(name = "disfraz_id")
+    @JsonIgnoreProperties({"reservations"})
     private Disfraz costume;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id", insertable = false, updatable = false)
+    @JoinColumn(name = "cliente_id")
+    @JsonIgnoreProperties({"messages","reservations"})
     private Cliente client;
 
     private Integer score;

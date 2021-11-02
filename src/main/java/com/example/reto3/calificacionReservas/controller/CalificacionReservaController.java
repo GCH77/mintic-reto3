@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/calificacion-reserva")
+@RequestMapping("/api/Score")
 public class CalificacionReservaController{
 
     private final CalificacionReservaServiceImpl calificacionReservaService;
@@ -33,11 +33,12 @@ public class CalificacionReservaController{
 
     @PutMapping("/update")
     public ResponseEntity<CalificacionReserva> update(@RequestBody CalificacionReserva calificacionReserva) {
-        return new ResponseEntity<>(calificacionReservaService.saveOrUpdate(calificacionReserva), HttpStatus.OK);
+        return new ResponseEntity<>(calificacionReservaService.saveOrUpdate(calificacionReserva), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> delete(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(calificacionReservaService.delete(id), HttpStatus.OK);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") Long id) {
+        calificacionReservaService.delete(id);
     }
 }

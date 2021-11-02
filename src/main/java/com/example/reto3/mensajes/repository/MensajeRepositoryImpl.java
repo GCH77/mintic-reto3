@@ -31,12 +31,7 @@ public class MensajeRepositoryImpl implements MensajeService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
-        if (mensajeCrudRepository.findById(id).isPresent()) {
-            mensajeCrudRepository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
+    public void delete(Long id) {
+        mensajeCrudRepository.deleteById(id);
     }
 }

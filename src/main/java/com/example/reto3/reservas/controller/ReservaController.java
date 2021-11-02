@@ -31,11 +31,12 @@ public class ReservaController {
 
     @PutMapping("/update")
     public ResponseEntity<Reserva> update(@RequestBody Reserva reserva) {
-        return new ResponseEntity<>(reservaService.saveOrUpdate(reserva), HttpStatus.OK);
+        return new ResponseEntity<>(reservaService.saveOrUpdate(reserva), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> delete(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(reservaService.delete(id), HttpStatus.OK);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") Long id) {
+        reservaService.delete(id);
     }
 }

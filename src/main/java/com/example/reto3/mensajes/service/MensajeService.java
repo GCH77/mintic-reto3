@@ -7,5 +7,5 @@ import java.util.List;
 public interface MensajeService {
     List<Mensaje> getAll();
     Mensaje saveOrUpdate(Mensaje mensaje);
-    Boolean delete(Long id);
+    void delete(Long id);
 }

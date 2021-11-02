@@ -3,6 +3,7 @@ package com.example.reto3.disfraces.model;
 import com.example.reto3.categorias.model.Categoria;
 import com.example.reto3.mensajes.model.Mensaje;
 import com.example.reto3.reservas.model.Reserva;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.List;
@@ -19,13 +20,16 @@ public class Disfraz {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", insertable = false, updatable = false)
+    @JoinColumn(name = "category_id")
+    @JsonIgnoreProperties("costumes")
     private Categoria category;
 
-    @OneToMany(mappedBy = "costume")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "costume")
+    @JsonIgnoreProperties({"costume","client"})
     private List<Mensaje> messages;
 
-    @OneToMany(mappedBy = "costume")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "costume")
+    @JsonIgnoreProperties({"costume"})
     private List<Reserva> reservations;
 
     public Disfraz() {

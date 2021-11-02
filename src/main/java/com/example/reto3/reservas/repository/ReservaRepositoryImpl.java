@@ -32,12 +32,7 @@ public class ReservaRepositoryImpl implements ReservaService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
-        if (reservaCrudRepository.findById(id).isPresent()) {
-            reservaCrudRepository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
+    public void delete(Long id) {
+        reservaCrudRepository.deleteById(id);
     }
 }

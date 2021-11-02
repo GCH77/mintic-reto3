@@ -31,11 +31,12 @@ public class MensajeController {
 
     @PutMapping("/update")
     public ResponseEntity<Mensaje> update(@RequestBody Mensaje mensaje) {
-        return new ResponseEntity<>(mensajeService.saveOrUpdate(mensaje), HttpStatus.OK);
+        return new ResponseEntity<>(mensajeService.saveOrUpdate(mensaje), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> delete(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(mensajeService.delete(id), HttpStatus.OK);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") Long id) {
+        mensajeService.delete(id);
     }
 }

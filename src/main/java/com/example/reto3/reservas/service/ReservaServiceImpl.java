@@ -23,7 +23,7 @@ public class ReservaServiceImpl {
         return reservaService.saveOrUpdate(reserva);
     }
 
-    public Boolean delete(Long id) {
-        return reservaService.delete(id);
+    public void delete(Long id) {
+         reservaService.delete(id);
     }
 }

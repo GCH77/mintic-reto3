@@ -2,6 +2,7 @@ package com.example.reto3.clientes.model;
 
 import com.example.reto3.mensajes.model.Mensaje;
 import com.example.reto3.reservas.model.Reserva;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,10 +18,12 @@ public class Cliente {
     private String name;
     private int age;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "client")
+    @JsonIgnoreProperties({"costume","client"})
     private List<Mensaje> messages;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "client")
+    @JsonIgnoreProperties({"costume","client"})
     private List<Reserva> reservations;
 
     public Cliente() {

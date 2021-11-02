@@ -7,5 +7,5 @@ import java.util.List;
 public interface ReservaService {
     List<Reserva> getAll();
     Reserva saveOrUpdate(Reserva reserva);
-    Boolean delete(Long id);
+    void delete(Long id);
 }

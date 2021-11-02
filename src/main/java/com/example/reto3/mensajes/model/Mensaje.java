@@ -2,6 +2,7 @@ package com.example.reto3.mensajes.model;
 
 import com.example.reto3.clientes.model.Cliente;
 import com.example.reto3.disfraces.model.Disfraz;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -14,11 +15,13 @@ public class Mensaje {
     private String messageText;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id", insertable = false, updatable = false)
+    @JoinColumn(name = "cliente_id")
+    @JsonIgnoreProperties({"messages", "reservations"})
     private Cliente client;
 
     @ManyToOne
-    @JoinColumn(name = "costume_id", insertable = false, updatable = false)
+    @JoinColumn(name = "costume_id")
+    @JsonIgnoreProperties({"messages", "reservations"})
     private Disfraz costume;
 
     public Mensaje() {

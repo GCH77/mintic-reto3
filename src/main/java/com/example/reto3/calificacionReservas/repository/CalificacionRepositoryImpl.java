@@ -31,12 +31,7 @@ public class CalificacionRepositoryImpl implements CalificacionReservaService {
 
     @Override
     @Transactional
-    public Boolean delete(Long id) {
-        if (calificacionCrudRepository.findById(id).isPresent()) {
-            calificacionCrudRepository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
+    public void delete(Long id) {
+        calificacionCrudRepository.deleteById(id);
     }
 }

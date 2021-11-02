@@ -8,5 +8,5 @@ import java.util.List;
 public interface CalificacionReservaService {
     List<CalificacionReserva> getAll();
     CalificacionReserva saveOrUpdate(CalificacionReserva calificacionReserva);
-    Boolean delete(Long id);
+    void delete(Long id);
 }

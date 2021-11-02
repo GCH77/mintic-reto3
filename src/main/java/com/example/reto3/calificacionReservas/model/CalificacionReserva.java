@@ -1,6 +1,7 @@
 package com.example.reto3.calificacionReservas.model;
 
 import com.example.reto3.reservas.model.Reserva;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -14,7 +15,7 @@ public class CalificacionReserva {
     private String message;
 
     @ManyToOne
-    @JoinColumn(name = "reserva_id", insertable = false, updatable = false)
+    @JoinColumn(name = "reserva_id")
     private Reserva reservation;
 
     public CalificacionReserva() {

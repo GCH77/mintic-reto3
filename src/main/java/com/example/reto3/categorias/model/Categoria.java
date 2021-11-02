@@ -1,6 +1,7 @@
 package com.example.reto3.categorias.model;
 
 import com.example.reto3.disfraces.model.Disfraz;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,7 +15,8 @@ public class Categoria {
     private String name;
     private String description;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "category")
+    @JsonIgnoreProperties({"category","messages","reservations"})
     private List<Disfraz> costumes;
 
     public Categoria() {
