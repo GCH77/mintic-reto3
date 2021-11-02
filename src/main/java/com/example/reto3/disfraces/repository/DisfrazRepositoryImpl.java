@@ -31,8 +31,11 @@ public class DisfrazRepositoryImpl implements DisfrazService {
             disfraz1.setName(disfraz.getName());
             disfraz1.setBrand(disfraz.getBrand());
             disfraz1.setYear(disfraz.getYear());
+
+            return disfrazCrudRepository.save(disfraz1);
+        } else {
+            return disfrazCrudRepository.save(disfraz);
         }
-        return disfrazCrudRepository.save(disfraz);
     }
 
     @Override
