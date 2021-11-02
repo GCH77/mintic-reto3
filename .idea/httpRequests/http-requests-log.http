@@ -1,0 +1,545 @@
+PUT http://localhost:8080/api/Costume/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a  edited"
+}
+
+<> 2021-11-01T233539.201.json
+
+###
+
+GET http://localhost:8080/api/Costume/all
+
+<> 2021-11-01T233535.200.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T233532.201.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T233530.201.json
+
+###
+
+PUT http://localhost:8080/api/Costume/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a  edited"
+}
+
+<> 2021-11-01T233441.201.json
+
+###
+
+GET http://localhost:8080/api/Costume/all
+
+<> 2021-11-01T233413.200.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T233353.201.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T233350.201.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T233318.500.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T233043.500.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T233037.201.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T232822.500.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T232819.201.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T232620.500.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T232616.201.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+###
+
+GET http://localhost:8080/api/Costume/all
+
+<> 2021-11-01T221501.200.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T221458.201.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T221452.201.json
+
+###
+
+GET http://localhost:8080/api/Costume/all
+
+<> 2021-11-01T220543.200.json
+
+###
+
+POST http://localhost:8080/api/Costume/save
+Content-Type: application/json
+
+{
+  "name": "Costume 1",
+  "brand": "Brand 1",
+  "year": 2020,
+  "description": "This is a description",
+  "category": { "id":  1}
+}
+
+<> 2021-11-01T220539.201.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name": "Categoria 1",
+  "description": "This is a description"
+}
+
+<> 2021-11-01T220259.201.json
+
+###
+
+GET http://localhost:8080/api/Client/all
+
+<> 2021-11-01T175130.200.json
+
+###
+
+PUT http://localhost:8080/api/Client/update
+Content-Type: application/json
+
+{
+  "idClient": 1,
+  "email": "agustin@gmail.com",
+  "password": "agustin123",
+  "name": "Agustin Parra",
+  "age": 18
+}
+
+<> 2021-11-01T175114.200.json
+
+###
+
+POST http://localhost:8080/api/Client/save
+Content-Type: application/json
+
+{
+  "idClient": 1,
+  "email": "gustin@gmail.com",
+  "password": "adeodato123",
+  "name": "Adeodato Sanchez",
+  "age": 15
+}
+
+<> 2021-11-01T175107.201.json
+
+###
+
+PUT http://localhost:8080/api/Client/update
+Content-Type: application/json
+
+{
+  "idClient": 2,
+  "email": "agustin@gmail.com",
+  "password": "agustin123",
+  "name": "Agustin Parra",
+  "age": 18
+}
+
+<> 2021-11-01T174851.200.json
+
+###
+
+POST http://localhost:8080/api/Client/save
+Content-Type: application/json
+
+{
+  "idClient": 1,
+  "email": "gustin@gmail.com",
+  "password": "adeodato123",
+  "name": "Adeodato Sanchez",
+  "age": 15
+}
+
+<> 2021-11-01T174829.201.json
+
+###
+
+DELETE http://localhost:8080/api/Client/1
+
+###
+
+PUT http://localhost:8080/api/Client/update
+Content-Type: application/json
+
+{
+  "idClient": 1,
+  "email": "agustin@gmail.com",
+  "password": "agustin123",
+  "name": "Agustin Parra",
+  "age": 18
+}
+
+<> 2021-11-01T174759.200.json
+
+###
+
+GET http://localhost:8080/api/Client/all
+
+<> 2021-11-01T174744.200.json
+
+###
+
+POST http://localhost:8080/api/Client/save
+Content-Type: application/json
+
+{
+  "idClient": 1,
+  "email": "gustin@gmail.com",
+  "password": "adeodato123",
+  "name": "Adeodato Sanchez",
+  "age": 15
+}
+
+<> 2021-11-01T174450.201.json
+
+###
+
+GET http://localhost:8080/api/Client/all
+
+<> 2021-11-01T174332.200.json
+
+###
+
+GET http://localhost:8080/api/Client/all
+
+<> 2021-11-01T174256.200.json
+
+###
+
+DELETE http://localhost:8080/api/Category/1
+
+###
+
+GET http://localhost:8080/api/Category/all
+
+<> 2021-11-01T172754.200.json
+
+###
+
+POST http://localhost:8080/api/Category/save
+Content-Type: application/json
+
+{
+  "name":  "Category 1",
+  "description": "Some description"
+}
+
+<> 2021-11-01T172738.201.json
+
+###
+
+POST http://localhost:8080/category/save
+Content-Type: application/json
+
+{
+  "name":  "Category 1",
+  "description": "Some description"
+}
+
+<> 2021-11-01T172719.404.json
+
+###
+
+GET http://localhost:8080/custome
+
+<> 2021-11-01T164603.200.json
+
+###
+
+GET http://localhost:8080/category
+
+<> 2021-11-01T164555.200.json
+
+###
+
+POST http://localhost:8080/custome/save
+Content-Type: application/json
+
+{
+  "brand": "Brand 1",
+  "year": 2020,
+  "name": "Custome 1",
+  "description": "This is a custome descrition",
+  "category": {"id": 1}
+}
+
+<> 2021-11-01T164549.201.json
+
+###
+
+GET http://localhost:8080/category
+
+<> 2021-11-01T164522.200.json
+
+###
+
+POST http://localhost:8080/category/save
+Content-Type: application/json
+
+{
+  "name":  "Category 1",
+  "description": "Some description"
+}
+
+<> 2021-11-01T164510.201.json
+
+###
+
+GET http://localhost:8080/custome
+
+###
+
+POST http://localhost:8080/custome/save
+Content-Type: application/json
+
+{
+  "brand": "Brand 1",
+  "year": 2020,
+  "name": "Custome 1",
+  "description": "This is a custome descrition",
+  "category": {"id": 1}
+}
+
+<> 2021-11-01T155747.201.json
+
+###
+
+POST http://localhost:8080/category/save
+Content-Type: application/json
+
+{
+  "name":  "Category 1",
+  "description": "Some description"
+}
+
+<> 2021-11-01T155720.201.json
+
+###
+
+GET http://localhost:8080/custome
+
+###
+
+GET http://localhost:8080/custome
+
+###
+
+POST http://localhost:8080/custome/save
+Content-Type: application/json
+
+{
+  "brand": "Brand 1",
+  "year": 2020,
+  "name": "Custome 1",
+  "description": "This is a custome descrition",
+  "category": {"id": 1}
+}
+
+<> 2021-11-01T154846.201.json
+
+###
+
+POST http://localhost:8080/category/save
+Content-Type: application/json
+
+{
+  "name":  "Category 1",
+  "description": "Some description"
+}
+
+<> 2021-11-01T154830.201.json
+
+###
+
+POST http://localhost:8080/client/save
+Content-Type: application/json
+
+{
+  "name": "Pedro Alvarez",
+  "email":  "pedroalvz@hotmail.com",
+  "age": 18,
+  "password":  "pepo123"
+}
+
+<> 2021-11-01T154822.201.json
+
+###
+

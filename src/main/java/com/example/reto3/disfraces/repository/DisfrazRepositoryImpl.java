@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class DisfrazRepositoryImpl implements DisfrazService {
@@ -26,11 +27,12 @@ public class DisfrazRepositoryImpl implements DisfrazService {
     @Override
     @Transactional
     public Disfraz saveOrUpdate(Disfraz disfraz) {
-        if (disfrazCrudRepository.existsById(disfraz.getId())) {
+        if (Optional.ofNullable(disfraz.getId()).isPresent()) {
             Disfraz disfraz1 = disfrazCrudRepository.getById(disfraz.getId());
             disfraz1.setName(disfraz.getName());
             disfraz1.setBrand(disfraz.getBrand());
             disfraz1.setYear(disfraz.getYear());
+            disfraz1.setDescription(disfraz.getDescription());
 
             return disfrazCrudRepository.save(disfraz1);
         } else {
