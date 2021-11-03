@@ -17,7 +17,7 @@ public class ReservaServiceImpl {
     @Autowired
     public ReservaServiceImpl(ReservaService reservaService) {
         this.reservaService = reservaService;
-         this.formatter = new SimpleDateFormat("dd-MM-yyyy");
+         this.formatter = new SimpleDateFormat("yyyy-MM-dd");
     }
 
     public List<Reserva> getAll() {

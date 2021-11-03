@@ -1,3 +1,9 @@
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T225045.200.json
+
+###
+
 GET http://localhost:8080/api/Client/report-clients
 
 <> 2021-11-02T224027.405.json
@@ -496,12 +502,6 @@ Content-Type: application/json
 }
 
 <> 2021-11-01T164549.201.json
-
-###
-
-GET http://localhost:8080/category
-
-<> 2021-11-01T164522.200.json
 
 ###
 
