@@ -1,3 +1,57 @@
+GET http://localhost:8080/api/Client/report-clients
+
+<> 2021-11-02T224027.405.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-status
+
+<> 2021-11-02T222054.200.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T202814.200.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T202327.500.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T200758.500.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T200547.500.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T200425.500.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T200134.500.json
+
+###
+
+GET http://localhost:8080/api/Reservation/report-dates/2020-01-01/2020-12-31
+
+<> 2021-11-02T195851.500.json
+
+###
+
 PUT http://localhost:8080/api/Costume/update
 Content-Type: application/json
 
@@ -448,98 +502,6 @@ Content-Type: application/json
 GET http://localhost:8080/category
 
 <> 2021-11-01T164522.200.json
-
-###
-
-POST http://localhost:8080/category/save
-Content-Type: application/json
-
-{
-  "name":  "Category 1",
-  "description": "Some description"
-}
-
-<> 2021-11-01T164510.201.json
-
-###
-
-GET http://localhost:8080/custome
-
-###
-
-POST http://localhost:8080/custome/save
-Content-Type: application/json
-
-{
-  "brand": "Brand 1",
-  "year": 2020,
-  "name": "Custome 1",
-  "description": "This is a custome descrition",
-  "category": {"id": 1}
-}
-
-<> 2021-11-01T155747.201.json
-
-###
-
-POST http://localhost:8080/category/save
-Content-Type: application/json
-
-{
-  "name":  "Category 1",
-  "description": "Some description"
-}
-
-<> 2021-11-01T155720.201.json
-
-###
-
-GET http://localhost:8080/custome
-
-###
-
-GET http://localhost:8080/custome
-
-###
-
-POST http://localhost:8080/custome/save
-Content-Type: application/json
-
-{
-  "brand": "Brand 1",
-  "year": 2020,
-  "name": "Custome 1",
-  "description": "This is a custome descrition",
-  "category": {"id": 1}
-}
-
-<> 2021-11-01T154846.201.json
-
-###
-
-POST http://localhost:8080/category/save
-Content-Type: application/json
-
-{
-  "name":  "Category 1",
-  "description": "Some description"
-}
-
-<> 2021-11-01T154830.201.json
-
-###
-
-POST http://localhost:8080/client/save
-Content-Type: application/json
-
-{
-  "name": "Pedro Alvarez",
-  "email":  "pedroalvz@hotmail.com",
-  "age": 18,
-  "password":  "pepo123"
-}
-
-<> 2021-11-01T154822.201.json
 
 ###
 
